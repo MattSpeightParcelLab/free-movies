@@ -65,7 +65,7 @@ def getVid(movieList): # MovieList Array
 	try:
 		os.system("chromium-browser \"https://openload.co/embed/"+id+"\"") # Change "chromium-browser" based on browser
 	except:
-		print("https://openload.co/embed/"+id+")
+		print("https://openload.co/embed/"+id)
 
 
 	# Search
