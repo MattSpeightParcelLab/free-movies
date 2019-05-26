@@ -2,6 +2,7 @@ import requests
 import re
 import pprint
 import os
+import subprocess
 
 """ https://123movies00.org/genre/ """
 """
@@ -60,7 +61,6 @@ def getVid(movieList): # MovieList Array
 	r = requests.post(movieurl, headers=headers).text.splitlines()
 
 	id = find(find(search(r, 'data-openload="'), ["d", " "]), ["\"", "\""]) # get video id
-
 
 	os.system("chromium-browser \"https://openload.co/embed/"+id+"\"") # Change "firefox" based on browser
 
